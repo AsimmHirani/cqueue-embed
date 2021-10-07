@@ -1,4 +1,5 @@
 #include "cqueue-embed.h"
+#include "../mssert/mssert.h"
 
 static int CQUEUE_memcpy(void* dest, const void * src, unsigned int len) {
     char* d = (char*)dest;

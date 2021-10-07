@@ -4,7 +4,7 @@
 #define MSSERT
 #define CQUEUE_DESKTOP
 #include "cqueue-target.h"
-#include "../mssert/mssert.h"
+
 
 typedef struct CQUEUE_Queue {
     unsigned int maxLen;

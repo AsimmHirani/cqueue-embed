@@ -1,6 +1,11 @@
 #ifndef CQUEUE_EMBED_CQUEUE_EMBED_H
 #define CQUEUE_EMBED_CQUEUE_EMBED_H
 
+#define MSSERT
+#define CQUEUE_DESKTOP
+#include "cqueue-target.h"
+#include "../mssert/mssert.h"
+
 typedef struct CQUEUE_Queue {
     unsigned int maxLen;
     unsigned int itemSize;

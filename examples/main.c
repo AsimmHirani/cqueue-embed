@@ -26,6 +26,10 @@ int main() {
         CQUEUE_enqueue(&queue,&t,sizeof(t));
     }
 
+    while(!CQUEUE_isEmpty(&queue)) {
+        CQUEUE_dequeue(&queue,&t,sizeof(t));
+        // TODO: Implement doing stuff with the data
+    }
     return 0;
 }
 

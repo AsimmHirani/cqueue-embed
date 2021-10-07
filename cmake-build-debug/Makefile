@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed
+CMAKE_SOURCE_DIR = /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cqueue-embed
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cqueue-embed/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cmake-build-debug/CMakeFiles /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cqueue-embed/cmake-build-debug/CMakeFiles /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cqueue-embed/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cqueue-embed/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ cqueue_embed/fast:
 	$(MAKE) -f CMakeFiles/cqueue_embed.dir/build.make CMakeFiles/cqueue_embed.dir/build
 .PHONY : cqueue_embed/fast
 
-library.o: library.c.o
+cqueue/cqueue-embed.o: cqueue/cqueue-embed.c.o
 
-.PHONY : library.o
+.PHONY : cqueue/cqueue-embed.o
 
 # target to build an object file
-library.c.o:
-	$(MAKE) -f CMakeFiles/cqueue_embed.dir/build.make CMakeFiles/cqueue_embed.dir/library.c.o
-.PHONY : library.c.o
+cqueue/cqueue-embed.c.o:
+	$(MAKE) -f CMakeFiles/cqueue_embed.dir/build.make CMakeFiles/cqueue_embed.dir/cqueue/cqueue-embed.c.o
+.PHONY : cqueue/cqueue-embed.c.o
 
-library.i: library.c.i
+cqueue/cqueue-embed.i: cqueue/cqueue-embed.c.i
 
-.PHONY : library.i
+.PHONY : cqueue/cqueue-embed.i
 
 # target to preprocess a source file
-library.c.i:
-	$(MAKE) -f CMakeFiles/cqueue_embed.dir/build.make CMakeFiles/cqueue_embed.dir/library.c.i
-.PHONY : library.c.i
+cqueue/cqueue-embed.c.i:
+	$(MAKE) -f CMakeFiles/cqueue_embed.dir/build.make CMakeFiles/cqueue_embed.dir/cqueue/cqueue-embed.c.i
+.PHONY : cqueue/cqueue-embed.c.i
 
-library.s: library.c.s
+cqueue/cqueue-embed.s: cqueue/cqueue-embed.c.s
 
-.PHONY : library.s
+.PHONY : cqueue/cqueue-embed.s
 
 # target to generate assembly for a file
-library.c.s:
-	$(MAKE) -f CMakeFiles/cqueue_embed.dir/build.make CMakeFiles/cqueue_embed.dir/library.c.s
-.PHONY : library.c.s
+cqueue/cqueue-embed.c.s:
+	$(MAKE) -f CMakeFiles/cqueue_embed.dir/build.make CMakeFiles/cqueue_embed.dir/cqueue/cqueue-embed.c.s
+.PHONY : cqueue/cqueue-embed.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... cqueue_embed"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
+	@echo "... cqueue/cqueue-embed.o"
+	@echo "... cqueue/cqueue-embed.i"
+	@echo "... cqueue/cqueue-embed.s"
 .PHONY : help
 
 

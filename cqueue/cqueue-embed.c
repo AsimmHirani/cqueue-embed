@@ -1,10 +1,11 @@
 #include "cqueue-embed.h"
 
 #define MSSERT
+#define CQUEUE_DESKTOP
 #include "cqueue-target.h"
-#include "mssert.h"
+#include "../mssert/mssert.h"
 
-static int memcpy(void* dest, const void * src, unsigned int len) {
+static int CQUEUE_memcpy(void* dest, const void * src, unsigned int len) {
     char* d = (char*)dest;
     char* s = (char*)src;
     ms_assert(len >= 0);
@@ -35,7 +36,7 @@ unsigned int CQUEUE_enqueue(CQUEUE_EMBED_Queue *queue, void * item, unsigned int
     int index = (queue->head + queue->n % queue->maxLen) * queue->itemSize;
     queue->n++;
 
-    memcpy((queue->buffer+index),item,queue->itemSize);
+    CQUEUE_memcpy((queue->buffer + index), item, queue->itemSize);
 
     return 0;
 }
@@ -49,7 +50,7 @@ int CQUEUE_dequeue(CQUEUE_EMBED_Queue *queue, void * buf, unsigned int len) {
     index = (queue->head)*queue->itemSize;
     queue->head++;
     queue->n--;
-    return memcpy(buf,queue->buffer+index,len);
+    return CQUEUE_memcpy(buf, queue->buffer + index, len);
 }
 
 int CQUEUE_isEmpty(CQUEUE_EMBED_Queue *queue) {

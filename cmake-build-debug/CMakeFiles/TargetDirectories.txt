@@ -1,3 +1,0 @@
-/mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Asimm/Documents/GitHub/cqueue-embed/cmake-build-debug/CMakeFiles/cqueue_embed.dir

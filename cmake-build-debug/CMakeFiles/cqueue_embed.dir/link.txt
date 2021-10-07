@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcqueue_embed.a  CMakeFiles/cqueue_embed.dir/library.c.o
-/usr/bin/ranlib libcqueue_embed.a

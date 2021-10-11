@@ -55,3 +55,11 @@ int CQUEUE_isEmpty(CQUEUE_EMBED_Queue *queue) {
 int CQUEUE_isFull(CQUEUE_EMBED_Queue *queue) {
     return queue->n == queue->maxLen;
 }
+
+void CQUEUE_empty(CQUEUE_EMBED_Queue* queue, void (*cb)(void*, int)) {
+    char buffer[queue->itemSize];
+    while (!CQUEUE_isEmpty(queue)) {
+        CQUEUE_dequeue(queue,buffer,queue->itemSize);
+        cb(buffer,queue->itemSize);
+    }
+}

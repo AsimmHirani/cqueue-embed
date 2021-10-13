@@ -18,5 +18,6 @@ unsigned int        CQUEUE_enqueue      (CQUEUE_EMBED_Queue * queue, void * item
 int                 CQUEUE_dequeue      (CQUEUE_EMBED_Queue * queue, void * buf, unsigned int len);
 int                 CQUEUE_isEmpty      (CQUEUE_EMBED_Queue * queue);
 int                 CQUEUE_isFull       (CQUEUE_EMBED_Queue * queue);
+void                CQUEUE_empty        (CQUEUE_EMBED_Queue* queue, void (*cb)(void*, int));
 
 #endif //CQUEUE_EMBED_CQUEUE_EMBED_H
